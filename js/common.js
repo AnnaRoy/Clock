@@ -18,7 +18,10 @@ function createClock(){
 	}
 	var clockStr = h +':' + m + ":" + s;
 	var colorStr = '#' + h + m + s;
-	var colorText = '#' + (h*4) + m + s;
+	var colorText = '#' + (h*8) + m + s;
+	if (h < 10){
+		colorText = '#ff' + m + s;
+	}
 
 	clock.textContent = clockStr;
 	color.textContent = colorStr;
